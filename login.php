@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../hair_cut_at_doorstep/Css/login.css">
+    <link rel="stylesheet" href="../hair_cut/Css/login.css">
     <title class="title">Login Page</title>
 
 
@@ -138,7 +138,7 @@ if (isset($_POST['login'])) {
                     $_SESSION['email'] = $email;
                     $_SESSION['password'] = $row['password'];
                     $_SESSION['usertype'] = $usertype;
-                    header('location:../../hair_cut_at_doorstep/admin/a_dashboard.php');
+                    header('location:../../hair_cut/admin/a_dashboard.php');
                     echo ("login success");
 
                     if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {

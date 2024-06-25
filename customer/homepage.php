@@ -161,7 +161,7 @@ include "../session/c_session.php";
     <section class="testimonials" id="testimonials">
         <div class="title white">
             <h2 style="color:black;">They<span>S</span>aid About Us</h2>
-            <p>We are passionate about changing the way you think about hair_cut_at_doorstep! </p>
+            <p>We are passionate about changing the way you think about hair_cut! </p>
         </div>
         <div class="content">
             <div class="box">

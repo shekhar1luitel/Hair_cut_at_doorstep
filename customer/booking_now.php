@@ -9,7 +9,7 @@ echo "$s_id <br>";
 date_default_timezone_set('Asia/Kathmandu');
 $currentDateTime = date('Y-m-d H:i:s');
 echo $currentDateTime;
-// include '../Hair_cut_at_doorstep/book_now.php';
+// include '../hair_cut/book_now.php';
 //selecting service from booking
 include '../dbconfig.php';
 $serviceQuery = "SELECT * FROM services where s_id='$s_id'";

@@ -104,37 +104,39 @@ include '../session/c_session.php';
     ?>
 
     <!-- HTML layout with product details -->
-    <?php foreach ($serviceResults as $row) { ?>
-        <!-- <h1>Book now</h1> -->
-        <div class="product-container">
-            <div class="product-description">
-                <h3>
-                    <?php echo $row['s_name']; ?>
-                </h3>
-                <p>
-                    <?php echo $row['s_time']; ?> Minute
-                </p>
-                <p>Price: Rs
-                    <?php echo $row['s_price']; ?>
-                </p>    
-            </div>
-            <?php $a = $row['s_image']; ?>
-            <div class="product-image">
-                <img src="../Admin/<?php echo $a ?>" alt="Services">
-                <a href="javascript:void(0);" onclick="confirmBooking(<?php echo $row['s_id']; ?>)" class="book-button">Book  Now</a>
-            </div>
-
-            <script>
-                function confirmBooking(serviceId) {
-                    if (confirm("Are you sure you want to book this service?")) {
-                        window.location.href = "booking_now.php?id=" + serviceId;
-                    }
-                }
-            </script>
-
-        </div>
-    <?php } ?>
-    <?php include '../Component/footer.php'; ?>
+     <div style="padding: 40px">
+         <?php foreach ($serviceResults as $row) { ?>
+             <!-- <h1>Book now</h1> -->
+             <div class="product-container">
+                 <div class="product-description">
+                     <h3>
+                         <?php echo $row['s_name']; ?>
+                     </h3>
+                     <p>
+                         <?php echo $row['s_time']; ?> Minute
+                     </p>
+                     <p>Price: Rs
+                         <?php echo $row['s_price']; ?>
+                     </p>    
+                 </div>
+                 <?php $a = $row['s_image']; ?>
+                 <div class="product-image">
+                     <img src="../Admin/<?php echo $a ?>" alt="Services">
+                     <a href="javascript:void(0);" onclick="confirmBooking(<?php echo $row['s_id']; ?>)" class="book-button">Book  Now</a>
+                 </div>
+     
+                 <script>
+                     function confirmBooking(serviceId) {
+                         if (confirm("Are you sure you want to book this service?")) {
+                             window.location.href = "booking_now.php?id=" + serviceId;
+                         }
+                     }
+                 </script>
+     
+             </div>
+         <?php } ?>
+         <?php include '../Component/footer.php'; ?>
+     </div>
 </body>
 <footer>
     <?php ?>
